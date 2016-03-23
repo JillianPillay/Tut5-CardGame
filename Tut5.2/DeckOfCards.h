@@ -8,7 +8,7 @@ public:
 	DeckOfCards();
 	~DeckOfCards();
 
-	void draw(DeckOfCards &aDeck);
+	void draw();
 	void reset();
 	void shuffle();
 	void peek();

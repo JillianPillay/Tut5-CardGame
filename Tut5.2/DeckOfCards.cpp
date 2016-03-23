@@ -4,6 +4,7 @@
 #include <ctime>
 #include <vector>
 #include <algorithm>
+#include <stack>
 using std::ostream;
 using std::vector;
 using namespace std;
@@ -92,4 +93,21 @@ void DeckOfCards:: deck()
 
 
 	}
-	
+	void DeckOfCards::peek()
+	{
+		{
+			std::stack<int> mystack;
+
+			mystack.push(1);
+			mystack.push(20);
+
+			mystack.top() -= 1;
+
+			std::cout << "mystack.top() is now " << mystack.top() << endl;
+
+		
+		}
+		
+
+
+	}
