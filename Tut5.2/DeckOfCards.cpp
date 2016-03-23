@@ -3,6 +3,9 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include <algorithm>
+using std::ostream;
+using std::vector;
 using namespace std;
 
 DeckOfCards::DeckOfCards()
@@ -18,13 +21,15 @@ DeckOfCards::~DeckOfCards()
 
 void DeckOfCards:: deck()
 {
-	int i;
+	int i,j;
 	int red[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	int black[] = { 11, 12, 13, 14, 15, 16, 17, 181, 19, 20 };
 	for (i = 1; i >= 20; i++)
 	{
+	
 		if (i = i + 10)
 		{
+
 			cout << "red" << endl;
 		} // first set of 10 cards are black
 		else
@@ -60,10 +65,31 @@ void DeckOfCards:: deck()
 	void DeckOfCards::reset()
 	{
 		int cards[10][2];
-		for (int i = 0; i < 20; i ++){
+		for (int i = 0; i < 20; i++){
 			for (int j = 0; j < 2; j++){
 				cout << cards[i][j].toString << endl;
-				}
 			}
 		}
 	}
+	void DeckOfCards::draw()
+	{
+
+
+		ostream& operator<<(ostream &out, const DeckOfCards &aDeck)
+		{
+			for (int i = aDeck.size - 1; i >= 0; i--)
+				out << aDeck.cards[i] << "\n";
+
+			return out;
+		}
+
+	}
+	void DeckOfCards::numberOfcards()
+	{
+		int size;
+		int i; 
+		size = 20 - DeckOfCards.draw();
+
+
+	}
+	
